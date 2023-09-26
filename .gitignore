@@ -26,3 +26,4 @@ dist-ssr
 # Assets
 /public/images
 /public/fonts
+/public/favicon.ico
