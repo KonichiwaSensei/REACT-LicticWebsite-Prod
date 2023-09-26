@@ -57,8 +57,8 @@ html {
 body {
     color: $color4;
     background-color: $color1;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
 
     &::before {
         content: "";
