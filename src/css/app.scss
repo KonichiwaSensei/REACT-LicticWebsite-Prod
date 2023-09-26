@@ -51,13 +51,13 @@ html {
     font-family: $font_family;
     font-weight: 800;
     overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-y: hidden;
 }
 
 body {
     color: $color4;
     background-color: $color1;
-    // overflow-x: hidden;
+    overflow-x: hidden;
     // overflow-y: hidden;
 
     &::before {
