@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/public/fonts/JosefinSans-ThinItalic.woff2') format('woff2'),
+        url('/public/fonts/fontsJosefinSans-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('/public/fonts/JosefinSans-Thin.woff2') format('woff2'),
+        url('/public/fonts/JosefinSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/public/fonts/Audiowide-Regular.woff2') format('woff2'),
+        url('/public/fonts/Audiowide-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import './Navigator.scss';
+@import './MainPage.scss';
+@import './AboutMe.scss';
+@import './Web.scss';
+@import './Music.scss';
+
+$font_family: Audiowide, Josefin Sans;
+
+$color1: #D6003D;
+$color2: #575756;
+$color3: #2E1E3A;
+$color4: #ffffff;
+$color5: #000000;
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $font_family;
+    font-weight: 800;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body {
+    color: $color4;
+    background-color: $color1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../../public/images/mascotcolored.svg');
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: -500px;
+        opacity: 0.3;
+        z-index: -5;
+
+        @media (max-width: 820px) {
+            background-size: 250%;
+            background-position: -400px;
+        }
+    }
+}
+
+.theejs_render {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+
+    @media (max-width: 820px) {
+        width: 100vw;
+        height: 50%;
+        top: 20%;
+    }
+}
+
+.lottie_audio_animation{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    align-self: center;
+    z-index: -5;
+    opacity: 0.3;
+}

@@ -1,0 +1,57 @@
+$color1: #D6003D;
+$color2: #575756;
+$color3: #2E1E3A;
+$color4: #ffffff;
+$color5: #000000;
+
+
+.web_page {
+    width: 100vw;
+    height: 100vh;
+
+    .web_page_back {
+        z-index: -1;
+    }
+
+    .web_page_front {
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+        height: inherit;
+        align-items: center;
+
+        .web_para {
+            font-size: 30px;
+            text-align: center;
+            margin-top: 100px;
+            margin-right: 150px;
+            margin-left: 150px;
+
+            text-shadow: 3px 3px 5px $color3;
+            transition: 0.5s ease-in-out;
+
+            &.purple {
+                text-shadow: 3px 3px 5px $color1;
+            }
+        }
+
+        .web_embed {
+            z-index: 1;
+            margin-top: 30px;
+            width: 80%;
+            height: 70%;
+
+            border-radius: 2em;
+            box-shadow: 0px 0px 20px $color3;
+            z-index: 2;
+            transition: 0.5s ease-in-out;
+
+            &.purple {
+                box-shadow: 0px 0px 20px $color1;
+            }
+
+        }
+    }
+
+
+}
