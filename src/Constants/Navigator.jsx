@@ -60,18 +60,22 @@ export default function Navigator() {
 
                 <TopMarquee />
 
-                <div className={"burger_menu" + " " + theme} onClick={handleMenuDisplay}>
-                    <div className={burgerClass + " " + theme}></div>
-                    <div className={burgerClass + " " + theme}></div>
-                    <div className={burgerClass + " " + theme}></div>
+                <div className="burger">
+                    {menuClick ? false : (
+                        <Lottie
+                            className={"burger_click_me" + " " + theme}
+                            animationData={lottieAnimationColour}
+                        />
+                    )}
+                    <div className={"burger_menu" + " " + theme} onClick={handleMenuDisplay}>
+                        <div className={burgerClass + " " + theme}></div>
+                        <div className={burgerClass + " " + theme}></div>
+                        <div className={burgerClass + " " + theme}></div>
+                    </div>
                 </div>
 
-                {menuClick ? false : (
-                    <Lottie
-                        className={"burger_click_me" + " " + theme}
-                        animationData={lottieAnimationColour}
-                    />
-                )}
+
+
 
                 <ThemeSelector />
 
